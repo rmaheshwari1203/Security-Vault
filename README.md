@@ -24,7 +24,7 @@ Follow these simple steps to get Secure Key Vault up and running on your system.
 
 1.  **Clone the Repository**:
     ```bash
-    git clone [https://github.com/your-username/secure-key-vault.git](https://github.com/your-username/secure-key-vault.git)
+    git clone [https://github.com/rmaheshwari1203/Security-Vault](https://github.com/rmaheshwari1203/Security-Vault)
     cd secure-key-vault
     ```
 
@@ -40,11 +40,6 @@ Follow these simple steps to get Secure Key Vault up and running on your system.
         venv\Scripts\activate
         ```
 
-3.  **Install Dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Note: You will need to create a `requirements.txt` file from your `pyproject.toml` dependencies for this step.)*
 
 ### Running the Application
 
@@ -108,5 +103,6 @@ The security of your data is the top priority for Secure Key Vault. Here’s a l
 * **Local Storage**: Your encrypted data never leaves your computer, ensuring you have complete control over your sensitive information.
 
 ## Contributing
+
 
 Contributions are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request.
