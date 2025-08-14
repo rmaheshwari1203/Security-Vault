@@ -1,0 +1,67 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["cargo", "gmp", "libiconv", "libxcrypt", "openssl", "pkg-config", "rustc"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Password Manager"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "password_manager_test"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Password Manager GUI"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Modern Password Manager"
+
+[[workflows.workflow]]
+name = "Password Manager"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[[workflows.workflow]]
+name = "password_manager_test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[[workflows.workflow]]
+name = "Password Manager GUI"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python gui_main.py"
+
+[workflows.workflow.metadata]
+outputType = "vnc"
+
+[[workflows.workflow]]
+name = "Modern Password Manager"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python gui_modern.py"
+
+[workflows.workflow.metadata]
+outputType = "vnc"
